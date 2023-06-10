@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebPackVue-SPA", "WebPackVue-SPA\WebPackVue-SPA.csproj", "{4F87A090-C34F-4B80-8E8C-D27D90C545C0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F87A090-C34F-4B80-8E8C-D27D90C545C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F87A090-C34F-4B80-8E8C-D27D90C545C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F87A090-C34F-4B80-8E8C-D27D90C545C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F87A090-C34F-4B80-8E8C-D27D90C545C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A9482F3-A7B7-462D-BC8C-FA7309822DA0}
+	EndGlobalSection
+EndGlobal
