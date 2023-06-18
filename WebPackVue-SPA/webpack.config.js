@@ -3,6 +3,7 @@ const { VueLoaderPlugin } = require('vue-loader');
 const path = require('path');
 const rootPath = path.resolve(__dirname);
 const distPath = rootPath + "/wwwroot/dist";
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 
 module.exports = {
@@ -33,10 +34,29 @@ module.exports = {
                 test: /\.vue$/,
                 use: 'vue-loader'
             },
+            // rule for loading .scss files
+            {
+                test: /\.scss$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true,
+                        },
+                    },
+                ],
+            }
         ],
     },
     plugins: [
         new VueLoaderPlugin(),
+        new MiniCssExtractPlugin({
+            filename: 'css/[name].bundle.[contenthash].css',
+        }),
         new HtmlWebpackPlugin({
             filename: "index.html",
             template: 'src/index.html',

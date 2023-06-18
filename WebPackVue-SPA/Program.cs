@@ -1,3 +1,4 @@
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -20,8 +21,30 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+
+
+
+
+//app.UseMvc(routes =>
+//{
+//    routes.MapRoute(
+//      name: "API",
+//      template: "api/{controller}/{action}/{id}",
+//      defaults: new { id = UrlParameter.Optional });
+
+//});
+
+app.MapControllerRoute(
+    name: "API",
+    pattern: "api/{controller}/{action}/{id}");
+
+
+
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+
 
 app.Run();
